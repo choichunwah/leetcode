@@ -6,13 +6,13 @@ const isPalindrome = function(x) {
 
     if (x > 0 && x % 10 != 0) {
 
-        const getBaseLog = (y) => {
-            return Math.log(y) / Math.log(10);
+        const getPowerOf10BaseLog = (power) => {
+            return Math.log(power) / Math.log(10);
         }
 
         let reminder = x
 
-        const numberOfIntegers = Math.floor(getBaseLog(reminder))
+        const numberOfIntegers = Math.floor(getPowerOf10BaseLog(reminder))
         const integers = []
         let remainedNumberOfIntegers = numberOfIntegers
         let integer = 0
